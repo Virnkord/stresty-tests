@@ -41,4 +41,4 @@ steps:
   match:
     status: 200
     body:
-      name: [{given: ['Pr'], family: 'Pupkin'}]
+      name: [{given: ['Petr'], family: 'Pupkin'}]
