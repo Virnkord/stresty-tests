@@ -3,4 +3,7 @@ language: bash
 before_script:
   - wget https://github.com/Aidbox/stresty/releases/download/0.0.8/stresty.jar
 script:
-  - AIDBOX_URL=http://auth0sync.aidbox.app AIDBOX_BASIC_AUTH=YmFzaWM6c2VjcmV0 java -jar stresty.jar test.yaml
+  - for file in /testfiles/*.yaml
+  - do
+    - AIDBOX_URL=http://auth0sync.aidbox.app AIDBOX_BASIC_AUTH=YmFzaWM6c2VjcmV0 java -jar stresty.jar "$file"
+  - done
