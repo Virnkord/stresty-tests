@@ -1,0 +1,4 @@
+language: bash
+
+script:
+  - AIDBOX_URL=http://auth0sync.aidbox.app AIDBOX_BASIC_AUTH=YmFzaWM6c2VjcmV0 java -jar stresty-1.0.0-standalone.jar test.yaml
